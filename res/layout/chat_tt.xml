@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/control"
+            android:layout_width="match_parent"
+            android:layout_height="145dp" >
+  
+            <Button
+                android:id="@+id/down"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="后退" />
+            
+            <Button
+                android:id="@+id/left"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/down"
+                android:layout_marginRight="32dp"
+                android:layout_toLeftOf="@+id/down"
+                android:text="向左" />
+
+            <Button
+                android:id="@+id/right"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/up"
+                android:layout_marginLeft="29dp"
+                android:layout_toRightOf="@+id/stop"
+                android:text="向右" />
+            
+             <Button
+                android:id="@+id/stop"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/down"
+                android:layout_toRightOf="@+id/left"
+                android:text="停止" />
+   
+
+            <Button
+                android:id="@+id/stand"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/right"
+                android:layout_alignParentBottom="true"
+                android:text="站立" />
+
+            <Button
+                android:id="@+id/lie"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/left"
+                android:layout_alignParentBottom="true"
+                android:text="趴下" />
+
+            <Button
+                android:id="@+id/up"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/left"
+                android:text="前进" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/edit_bottombar"
+            android:layout_below="@+id/control" >
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:divider="#ffc6c6c6"
+                android:scrollingCache="false"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_bottombar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <Button
+                android:id="@+id/btn_disconnect"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="断开" />
+
+            <Button
+                android:id="@+id/btn_msg_send"
+                android:layout_width="65dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="发送" />
+
+            <EditText
+                android:id="@+id/MessageText"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btn_disconnect"
+                android:hint="说点什么呢?"
+                android:textSize="15dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
